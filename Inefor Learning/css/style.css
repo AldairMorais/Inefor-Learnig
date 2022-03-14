@@ -7,7 +7,122 @@
     --fullScreen: 100vh;
     --cursorPointer: pointer;
     --fontMontsrrat: 'Montserrat', sans-serif; 
+
+    --firstColorDefault: #00005a;
+    --secondColorDefault: #E20C32;
+    --firstBlackColorDefault: #333;
+    --secondBlackColorDefault: #00005a;
+    --cursorPointer: pointer;
+
 }
+
+
+:root{
+
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/*NAVEGAÇÃO*/
+.nav-item a:hover{
+    border-bottom: 2px solid #E20C32;
+}
+
+/*NAV/sign in & sing up/*/
+
+header{
+    background-color: var(--firstColorDefault);
+}
+
+.button-box{
+    width: 220px;
+    position: relative;
+    /*box-shadow: 0 0 20px 9px #E20C32;*/
+    border-radius: 30px;
+    background-color: white;
+    text-align: center;
+}
+
+.btn-sign{
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+button.btn-sign.signup{
+    background-color: #E20C32;
+    color: white;
+    border-radius: 30px;
+    width: 100%;
+}
+
+button.btn-sign.signin{
+    border-radius: 30px;
+    width: 100%;
+}
+
+button.btn-sign.signup:hover{
+    background-color: #b40021;
+    transition: ease-in-out .5s;
+}
+
+
+/*HERO*/
+.hero{
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .3)), url("https://images.pexels.com/photos/5940708/pexels-photo-5940708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    height: 100vh; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    color: white;
+    padding-top: 18%;
+    padding-left: 5px;
+}
+.hero .col2{
+    padding-left: 50%;
+}
+
+/*HERO/ title/*/
+h1{
+    font-size: 4rem;
+    font-family: 'Josefin Sans', sans-serif; 
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*HERO/btn-ptimary/*/
+.btn-primary{
+    background-color: #E20C32;
+    border-radius: 20px;
+    padding: 10px 50px 10px 50px;
+    border: none;
+}
+
+.btn-primary:hover{
+    background-color: #c40326;
+}
+
+
+/*HERO /botao play/*/
+.play{
+    text-decoration: none;
+    color: #E20C32;
+    padding: 20px;
+    border-radius: 100px;
+    border:2px solid #E20C32;
+}
+
+.play:hover{
+    color: white;
+    border:2px solid white;
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700&display=swap');
 
@@ -38,96 +153,6 @@ ul{
    .carousel-indicators{
      bottom: -28px !important;
    }
-
-.wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-.wrapper .card{
-  background: #fff;
-  width: 75vh;
-  padding: 20px;
-  display: flex;
-  opacity: 0;
-  pointer-events: none;
-  justify-content: space-between;
-  position: absolute;
-  /* align-items: center; */
-  animation:animate 15s linear infinite;
-  animation-delay: calc(3s * var(--dalay));
-}
-.card:hover .wrapper {
-  animation-play-state: paused;
-}
-.wrapper .card:last-child{
-  animation-delay: calc(-3s * var(--dalay));
-}
-
-@keyframes animate{
-0%{
-opacity: 0;
-transform: translateY(100%) scale(0.5);
-}
-5%, 20%{
-opacity: 0.4;
-transform: translateY(100%) scale(0.7);
-}
-25%, 40%{
-opacity: 1;
-pointer-events: auto;
-transform: translateY(0%) scale(1);
-}
-45%, 60%{
-opacity: 0.4;
-transform: translateY(-100%) scale(0.7);
-}
-65%, 100%{
-opacity: 0;
-transform: translateY(-100%) scale(0.5);
-}
-/* 100%{
-opacity: 0;
-transform: translateY(-100%) scale(0.5);
-} */
-}
-.card .content{
-display: flex;
-align-items: center;
-}
-.wrapper .card .img{
-  height: 90px;
-  width: 90px;
-  position: absolute;
-  left: -5px;
-  background: #fff;
-  border-radius: 50%;
-  padding: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-}
-.card .img img{
-height: 100%;
-width: 100%;
-border-radius: 50%;
-object-fit: cover;
-}
-.card .details{
-  margin-left: 80px;
-}
-
-.details span{
-  font-weight: 600;
-font-size: 18px;
-}
-
-.card a{
-  text-decoration: none;
-  background: red;
-  padding: 7px 18px;
-  border-radius: 25px;
-  color: #fff;
-}
 
 
 body::-webkit-scrollbar-thumb {
@@ -213,4 +238,63 @@ body {
 
 #btn:active{
 transform: scale(1.01);
+}
+a{
+  text-decoration: none;
+}
+.lst a:hover{
+  color:#ccc !important;
+}
+
+
+
+/*HERO*/
+.hero{
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .3)), url("https://images.pexels.com/photos/5940708/pexels-photo-5940708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    height: 100vh; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    color: white;
+    padding-top: 18%;
+    padding-left: 5px;
+}
+.hero .col2{
+    padding-left: 50%;
+}
+
+/*HERO/ title/*/
+h1{
+    font-size: 4rem;
+    font-family: 'Josefin Sans', sans-serif; 
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*HERO/btn-ptimary/*/
+.btn-primary{
+    background-color: #E20C32;
+    border-radius: 20px;
+    padding: 10px 50px 10px 50px;
+    border: none;
+}
+
+.btn-primary:hover{
+    background-color: #c40326;
+}
+
+
+/*HERO /botao play/*/
+.play{
+    text-decoration: none;
+    color: #E20C32;
+    padding: 20px;
+    border-radius: 100px;
+    border:2px solid #E20C32;
+}
+
+.play:hover{
+    color: white;
+    border:2px solid white;
 }
